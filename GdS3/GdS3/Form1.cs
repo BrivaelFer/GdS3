@@ -32,7 +32,11 @@ namespace GdS3
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter && bAjout.Enabled)
-                ajout();
+            {
+                if(!verif())
+                    ajout();
+            }
+            rTableau();  
         }
 
         private void Form1_Load(object sender, EventArgs e)
